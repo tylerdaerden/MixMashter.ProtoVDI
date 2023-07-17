@@ -73,13 +73,13 @@
     <Build Include="Table\Masher.sql" />
     <Build Include="Table\Mashup.sql" />
     <Build Include="Table\History.sql" />
-    <Build Include="Procedures\User\CSP_AddUser.sql" />
+    <Build Include="Procedures\User\CSP_Register.sql" />
     <Build Include="Functions\CSF_HashPassword.sql" />
     <Build Include="Functions\CSF_GetPostSalt.sql" />
     <Build Include="Functions\CSF_GetPreSalt.sql" />
     <Build Include="Procedures\User\CSP_Login.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="MixMashter_Database.publish.xml" />
+    <None Include="MixMashter.Database.publish.xml" />
   </ItemGroup>
 </Project>
