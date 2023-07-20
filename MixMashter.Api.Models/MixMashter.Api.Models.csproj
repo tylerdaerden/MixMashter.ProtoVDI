@@ -7,15 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Tools.Ado" Version="1.0.0" />
-    <PackageReference Include="Tools.CQS" Version="1.0.0" />
+    <Folder Include="Queries\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Command\" />
-    <Folder Include="Services\" />
-    <Folder Include="Queries\" />
-    <Folder Include="Repositories\" />
+    <ProjectReference Include="..\Tools.Ado\Tools.Ado.csproj" />
+    <ProjectReference Include="..\Tools.CQS\Tools.CQS.csproj" />
   </ItemGroup>
 
 </Project>

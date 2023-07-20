@@ -3,9 +3,9 @@
 	@Passwd NVARCHAR(20)
 AS
 BEGIN
-	SELECT Id, FirstName, LastName,UserName, Email 
+	SELECT [Id], [FirstName], [LastName],[UserName], [Email] 
 	FROM [User]
-	WHERE	Email = @Email 
-	AND		Passwd = HASHBYTES('SHA2_512', @Passwd);
+	WHERE	[Email] = @Email 
+	AND		[Passwd] = dbo.CSF_HashPassword(@Passwd);
 	RETURN 0
 END

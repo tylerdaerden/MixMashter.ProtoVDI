@@ -8,6 +8,6 @@
 AS
 BEGIN
 	INSERT INTO [User] ([FirstName], [LastName], [UserName], [Email], [BirthDate], [Passwd])
-	VALUES (@FirstName, @LastName, @UserName, @Email, CONVERT(DATE, @BirthDate, 103), HASHBYTES('SHA2_512', @Passwd))
+	VALUES (@FirstName, @LastName, @UserName, @Email, CONVERT(DATE, @BirthDate, 103),  dbo.CSF_HashPassword(@Passwd))
 	RETURN 0
 END
