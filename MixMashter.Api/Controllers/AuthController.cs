@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MixMashter.Api.Models;
 using MixMashter.Api.Models.Command;
+using MixMashter.Api.Models.Entities;
+using MixMashter.Api.Models.Forms;
+using MixMashter.Api.Models.Queries;
 using MixMashter.Api.Models.Repositories;
 using System.Windows.Input;
 using Tool.Cqs.Commands;
@@ -36,6 +38,22 @@ namespace MixMashter.Api.Controllers
 
 
             return NoContent();
+        }
+
+        [HttpPost("Login")]
+        public IActionResult Login([FromBody]LoginForm form) 
+        {
+            _logger.LogInformation($"Nouvel demande d'authentification : {form.Email}");
+            User? utilisateur = _authRepository.Execute(new LoginQuery(form.Email, form.Password));
+
+            if (utilisateur is null)
+            {
+                _logger.LogWarning("Utilisateur Not Found");
+                return NotFound();
+            }
+
+            return Ok(utilisateur);
+
         }
 
     }

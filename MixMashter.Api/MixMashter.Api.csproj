@@ -21,4 +21,9 @@
     <ProjectReference Include="..\MixMashter.Api.Models\MixMashter.Api.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\Dtos\" />
+    <Folder Include="Models\Mappers\" />
+  </ItemGroup>
+
 </Project>

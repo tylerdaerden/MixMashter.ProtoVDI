@@ -1,4 +1,7 @@
 ﻿using MixMashter.Api.Models.Command;
+using MixMashter.Api.Models.Entities;
+using MixMashter.Api.Models.Mappers;
+using MixMashter.Api.Models.Queries;
 using MixMashter.Api.Models.Repositories;
 using System;
 using System.Collections.Generic;
@@ -36,6 +39,16 @@ namespace MixMashter.Api.Models.Services
             catch (Exception ex)
             {
                 return ICommandResult.Failure(ex.Message);
+            }
+        }
+
+        public User? Execute(LoginQuery query)
+        {
+            using (_dbConnection)
+            {
+                _dbConnection.Open();
+                return
+                _dbConnection.ExecuteReader("CSP_Login",(dr) => dr.ToUser(),true,query).SingleOrDefault();
             }
         }
 
