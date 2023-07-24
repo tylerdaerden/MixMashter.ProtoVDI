@@ -1,10 +1,10 @@
 ﻿CREATE TABLE [dbo].[Mashup]
 (
-	[Id] INT NOT NULL ,
+	[Id] INT IDENTITY(1,1) NOT NULL ,
 	[Title] NVARCHAR(80) NOT NULL ,
 	[Tag] NVARCHAR(50) NOT NULL ,
 	[PathFile] NVARCHAR(384) NOT NULL , 
-	[Length] NVARCHAR(50) NOT NULL,
+	[Length] INT NOT NULL,
 	TrackId INT NOT NULL , 
 	MasherId INT NOT NULL
 

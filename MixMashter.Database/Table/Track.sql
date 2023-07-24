@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Track]
 (
-	[Id] INT NOT NULL ,
+	[Id] INT IDENTITY (1,1) NOT NULL ,
 	[Title] NVARCHAR(80) NOT NULL, 
 	[Length]INT NOT NULL , 
 	[Tag] NVARCHAR(50) NOT NULL , 

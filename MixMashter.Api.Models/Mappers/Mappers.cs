@@ -8,24 +8,25 @@ using System.Threading.Tasks;
 
 namespace MixMashter.Api.Models.Mappers
 {
-    internal static class DataRecordExtensions
+    internal static class Mappers
     {
-
-        internal static User ToUser (this IDataRecord dataRecord)
+        internal static User ToUser(this IDataRecord dataRecord)
         {
+            // Convert the byte[] (Passwd) to a string
+            var passwdBytes = (byte[])dataRecord["Passwd"];
+            var passwd = Encoding.UTF8.GetString(passwdBytes);
+
+            // Create the User object with the converted Passwd
             return new User(
                 (int)dataRecord["Id"],
                 (string)dataRecord["FirstName"],
                 (string)dataRecord["LastName"],
                 (string)dataRecord["UserName"],
                 (string)dataRecord["Email"],
-                (string)dataRecord["BirthDate"],
-                (string)dataRecord["Passwd"]
-                );
-
-
+                (DateTime)dataRecord["BirthDate"],
+                passwd
+            );
         }
-
-
     }
+
 }

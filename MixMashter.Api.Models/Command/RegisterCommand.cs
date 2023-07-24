@@ -27,14 +27,6 @@ namespace MixMashter.Api.Models.Command
             Passwd = passwd;
         }
 
-        // old version
-        //public RegisterCommand(string firstName, string lastName, string username, string email, DateTime birthdate, string passwd)
-        //{
-        //    FirstName = firstName;
-        //    LastName = lastName;
-        //    Email = email;
-        //    Passwd = passwd;
-        //}
 
     }
 }

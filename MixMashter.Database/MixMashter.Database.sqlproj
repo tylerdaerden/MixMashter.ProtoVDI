@@ -78,6 +78,10 @@
     <Build Include="Functions\CSF_GetPostSalt.sql" />
     <Build Include="Functions\CSF_GetPreSalt.sql" />
     <Build Include="Procedures\User\CSP_Login.sql" />
+    <Build Include="Procedures\Mashup\CSP_AddMashup.sql" />
+    <Build Include="Procedures\Masher\CSP_AddMasher.sql" />
+    <Build Include="Procedures\Artist\CSP_AddArtist.sql" />
+    <Build Include="Procedures\Track\CSP_AddTrack.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MixMashter.Database.publish.xml" />

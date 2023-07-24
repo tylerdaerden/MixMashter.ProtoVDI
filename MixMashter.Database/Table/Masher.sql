@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Masher]
 (
-	[Id] INT NOT NULL ,
+	[Id] INT IDENTITY (1,1) NOT NULL ,
 	[MasherName] NVARCHAR(80) NOT NULL , 
 	[Tag] NVARCHAR(80)NOT NULL , 
 

@@ -42,14 +42,22 @@ namespace MixMashter.Api.Models.Services
             }
         }
 
-        public User? Execute(LoginQuery query)
+        //public User? Execute(LoginQuery query)
+        //{
+        //    using (_dbConnection)
+        //    {
+        //        _dbConnection.Open();
+        //        return
+        //        _dbConnection.ExecuteReader("CSP_Login",(dr) => dr.ToUser(),true,query).SingleOrDefault();
+        //    }
+        //}
+
+        public User Execute(LoginQuery query)
         {
-            using (_dbConnection)
-            {
-                _dbConnection.Open();
-                return
-                _dbConnection.ExecuteReader("CSP_Login",(dr) => dr.ToUser(),true,query).SingleOrDefault();
-            }
+            _dbConnection.Open();
+            User? user = _dbConnection.ExecuteReader("CSP_Login" , dr => dr.ToUser(),true,query).SingleOrDefault();
+            _dbConnection.Close();
+            return user;
         }
 
         //public Utilisateur? Execute(LoginQuery query)
