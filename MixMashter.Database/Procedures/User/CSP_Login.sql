@@ -1,7 +1,7 @@
 ﻿CREATE PROCEDURE [dbo].[CSP_Login]
 	@UserName NVARCHAR(80),
 	@Email NVARCHAR(384),
-	@Passwd NVARCHAR(20)
+	@Password NVARCHAR(20)
 AS
 BEGIN
 	DECLARE @Result INT
@@ -11,7 +11,7 @@ BEGIN
 	WHERE	
 		[UserName] = @UserName
 		AND [Email] = @Email 
-		AND [Passwd] = dbo.CSF_HashPassword(@Passwd);
+		AND [Passwd] = dbo.CSF_HashPassword(@Password);
 
 	 --Vérification si un utilisateur a été trouvé
 	IF @@ROWCOUNT = 0

@@ -44,7 +44,7 @@ namespace MixMashter.Api.Controllers
         public IActionResult Login([FromBody]LoginForm form) 
         {
             _logger.LogInformation($"Nouvel demande d'authentification : {form.Email}");
-            User? utilisateur = _authRepository.Execute(new LoginQuery(form.Email, form.Password));
+            User? utilisateur = _authRepository.Execute(new LoginQuery(form.UserName, form.Email, form.Password));
 
             if (utilisateur is null)
             {

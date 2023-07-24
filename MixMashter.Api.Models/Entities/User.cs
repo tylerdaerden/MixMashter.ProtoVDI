@@ -10,16 +10,16 @@ namespace MixMashter.Api.Models.Entities
 #nullable disable
     public class User
     {
-
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string UserName { get; set; }
         public string Email { get; set; }
         public string Birthdate { get;set; }
+        public string Password { get; set; }
 
 
-        public User(int id, string firstName, string lastName, string userName, string email, string birthdate)
+        public User(int id, string firstName, string lastName, string userName, string email, string birthdate, string password)
         {
             Id = id;
             FirstName = firstName;
@@ -27,7 +27,10 @@ namespace MixMashter.Api.Models.Entities
             UserName = userName;
             Email = email;
             Birthdate = birthdate;
+            Password = password;
         }
+
+
 
 
         //old Version

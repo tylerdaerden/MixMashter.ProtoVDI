@@ -22,10 +22,10 @@ namespace MixMashter.Api.Models.Queries
             Password = password;
         }
 
-        public LoginQuery(string email, string password)
-        {
-            Email = email;
-            Password = password;
-        }
+        //public LoginQuery(string email, string password)
+        //{
+        //    Email = email;
+        //    Password = password;
+        //}
     }
 }
