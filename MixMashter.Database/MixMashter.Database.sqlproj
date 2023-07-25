@@ -82,6 +82,8 @@
     <Build Include="Procedures\Masher\CSP_AddMasher.sql" />
     <Build Include="Procedures\Artist\CSP_AddArtist.sql" />
     <Build Include="Procedures\Track\CSP_AddTrack.sql" />
+    <Build Include="Table\MashupTrack.sql" />
+    <Build Include="Table\TrackArtist.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MixMashter.Database.publish.xml" />

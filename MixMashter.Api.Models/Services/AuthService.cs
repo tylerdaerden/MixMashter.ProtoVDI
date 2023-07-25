@@ -16,6 +16,7 @@ using Tools.CQS.Command;
 
 namespace MixMashter.Api.Models.Services
 {
+#nullable disable
     public class AuthService : IAuthRepository
     {
         private readonly DbConnection _dbConnection;
@@ -55,7 +56,7 @@ namespace MixMashter.Api.Models.Services
         public User Execute(LoginQuery query)
         {
             _dbConnection.Open();
-            User? user = _dbConnection.ExecuteReader("CSP_Login" , dr => dr.ToUser(),true,query).SingleOrDefault();
+            User user = _dbConnection.ExecuteReader("CSP_Login" , dr => dr.ToUser(),true,query).SingleOrDefault();
             _dbConnection.Close();
             return user;
         }
