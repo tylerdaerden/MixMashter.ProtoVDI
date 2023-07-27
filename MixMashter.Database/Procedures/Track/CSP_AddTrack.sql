@@ -1,20 +1,23 @@
 ﻿CREATE PROCEDURE [dbo].[CSP_AddTrack]
 	@Title NVARCHAR(80),
 	@Length INT , 
-	@Tag NVARCHAR(50)
+	@ArtistTag NVARCHAR(80),
+	@TrackTag NVARCHAR(80)
+
 AS
 BEGIN 
-	DECLARE @ArtistId INT
+	DECLARE @ArtistId INT , @Track_ArtistTag NVARCHAR(80)
 
 	-- Vérification si l'artiste existe dans la base de données en utilisant le Tag de la track
-	IF EXISTS (SELECT 1 FROM [Artist] WHERE [Tag] = SUBSTRING(@Tag, 1, 3))
+	IF EXISTS (SELECT 1 FROM [Artist] WHERE [Tag] = SUBSTRING(@ArtistTag, 1, 6))
 	BEGIN
 		-- Récupération de l'ID de l'artiste existant
-		SELECT @ArtistId = [Id] FROM [Artist] WHERE [Tag] = SUBSTRING(@Tag, 1, 3)
+		SELECT @ArtistId = [Id] FROM [Artist] WHERE [Tag] = SUBSTRING(@ArtistTag, 1, 6)
+		SELECT @Track_ArtistTag = CONCAT(@ArtistTag,'_',@TrackTag)
 
 		-- Insertion de la track avec l'ID de l'artiste correspondant
 		INSERT INTO [Track] ([Title], [Length], [Tag], [ArtistId])
-		VALUES (@Title, @Length, @Tag, @ArtistId)
+		VALUES (@Title, @Length, @Track_ArtistTag, @ArtistId)
 
 		-- Vérification de l'insertion
 		IF @@ROWCOUNT > 0 
