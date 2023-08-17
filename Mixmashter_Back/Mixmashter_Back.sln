@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mixmashter_Back", "Mixmashter_Back\Mixmashter_Back.csproj", "{37AAF131-9FE2-4008-9034-BE80F96C13B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MixmashterDB", "MixmashterDB", "{B7FD34E1-7A44-44EF-A7D6-44A144B19353}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MixmashterDB", "MixmashterDB\MixMashterDB.sqlproj", "{7F0C3FE2-A70D-4B6C-8434-8720943E9D16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37AAF131-9FE2-4008-9034-BE80F96C13B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37AAF131-9FE2-4008-9034-BE80F96C13B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37AAF131-9FE2-4008-9034-BE80F96C13B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37AAF131-9FE2-4008-9034-BE80F96C13B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F0C3FE2-A70D-4B6C-8434-8720943E9D16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F0C3FE2-A70D-4B6C-8434-8720943E9D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F0C3FE2-A70D-4B6C-8434-8720943E9D16}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7F0C3FE2-A70D-4B6C-8434-8720943E9D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F0C3FE2-A70D-4B6C-8434-8720943E9D16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F0C3FE2-A70D-4B6C-8434-8720943E9D16}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7F0C3FE2-A70D-4B6C-8434-8720943E9D16} = {B7FD34E1-7A44-44EF-A7D6-44A144B19353}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A16266CA-7FAA-412E-9318-D768238BCDD4}
+	EndGlobalSection
+EndGlobal

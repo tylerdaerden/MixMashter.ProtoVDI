@@ -1,4 +1,8 @@
-﻿CREATE PROCEDURE [dbo].[CSP_AddMashup]
+﻿--SOUCIS SUR LA RECUPERATION DE LA TRACK ID A CORRIGER !!!
+
+
+
+CREATE PROCEDURE [dbo].[CSP_AddMashup]
     @Title NVARCHAR(160),
     @PathFile NVARCHAR(384),
     @Length INT,
@@ -6,7 +10,7 @@
     @MasherTag NVARCHAR(1000)
 AS
 BEGIN
-    DECLARE @MasherId INT, @MashupId INT
+    DECLARE @MasherId INT, @MashupId INT , @TrackId INT
 
     -- Vérification si le Masher existe dans la base de données en utilisant le Tag
     IF EXISTS (SELECT 1 FROM [Masher] WHERE [Tag] = @MasherTag)
@@ -14,13 +18,16 @@ BEGIN
         -- Récupération de l'ID du Masher existant
         SELECT @MasherId = [Id] FROM [Masher] WHERE [Tag] = @MasherTag
 
+        --Récupération ID des tracks existantes
+        SELECT @TrackId =[Id] FROM [Track] WHERE [Tag] = @TrackTags
+
         -- Génération du Tag pour le Mashup en utilisant les Tags des Tracks
         DECLARE @MashupTag NVARCHAR(1000)
         SELECT @MashupTag = CONCAT(@MasherTag, '_', @TrackTags)
 
         -- Insertion du Mashup avec l'ID du Masher correspondant et le Tag généré
-        INSERT INTO [Mashup] ([Title], [Tag], [PathFile], [Length], [MasherId])
-        VALUES (@Title, @MashupTag, @PathFile, @Length, @MasherId)
+        INSERT INTO [Mashup] ([Title], [Tag], [PathFile], [Length],[TrackId], [MasherId])
+        VALUES (@Title, @MashupTag, @PathFile, @Length, @TrackId , @MasherId)
 
         -- Vérification de l'insertion
         IF @@ROWCOUNT > 0 

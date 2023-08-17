@@ -1,0 +1,11 @@
+﻿CREATE FUNCTION [dbo].[MMSF_GetPreSalt]
+(
+
+)
+RETURNS NCHAR(2048)
+AS 
+BEGIN 
+
+RETURN N'Y7J%M27RV3KXGHVB%AYR8M?9A^$3K^-bGkQ^64KXmF822T46QEJ7#4wftVecuP8X3W25$K=v9^9=S9x$EpbjYVLA6c9QGkkGwHA5dRbm=!TR?kW#nH=kZ$ZW=Fx_QScs*K&rcye%kZC-FJX^yBnzTy@&bLvLm9DjXj^Bd4S#Z&p9mL=NRsY_h&6e5+=g-eRrjQh*eLbDWwnz+j7y@@NMEwGN%TbNBYZgvuQs5W=7fQqRu#*p6TdRAJK&Y%%Cs&qt2qQ+eh+c!eH-H^tyZvDu=a!Zq^HgkKnZ_EEe_utF=BVR&JYcLwNKxw7&Qr96jndG2$?jK@tq*v%UxJ$QT&e8$TP+eZAEHvtWEqspCe+mcS6=2WBYzb?9w3YNXP?yYTYCb8yj9BHQugY9&#CTJNg#K-Z-!-YK&Anh^?Exxfynk#9mz%7NUb!kQhFgZS+ASrzz8ggpdzu*3EW4+6R&q3ad8h32ah8$$-YStf!tdhqd7V!y5QS-yk^-^cgda7H_Lwnan+BEc8M6vr3azs$%3uJLN*8S5=^Pe=2jEQ5^g5ee&#h$ArhywwJ3DhF6fxZKv5uap*8NJ7KLzQ&7L8mwQX3Cy8e%spWYqy35BA+%GfGrdK7x%d!6-6gA9sg@8x8?PC3gt$rznaF!%A!?QuNeW7=RKUuAtW5mwaz3p#^Srw=hh9_t2WA9CCAgeRNQUue&@wYtkxbbfYV8Xk+kJtrpJNZzJ&TCG3&$x%tB%tKA=xu!qdnkTMK7dt4v^W9?8yx_Mr#*-aFt#@#*!kDVFcv&Lgyb*S^?zV!mEYdsM8!@NSy?2+uSjMmAQ5MQuQf+h*haEn^=hetT&eX$GQYx$L@#jWgNJ4=*XK&%=48gctz++VhKe8HK5myEz-_Wa@CdtpW@?G!PQEBkqQNecLAsjs@7ShVR*Hr=-dc9n%SAfV7b_kBCv_r@G9tK$qke4N?4#PF2R8DhRraUG_kjczb5Ly@D^C@5_p3^U#PDHzWZm$M2BfmwND7mZ!k5ypXKAGVF&bHRD-ujn+fcRAb_#fTzPKf3!vYhE!KeYrZfgn7h?G#YC#2hz_*q*twBY4#3#cZjpJ-9W2ewmfahWKDRqM!jYL?yAS$6KemnJBCM4N=bw7GywRKEa4s+Aj#R8Bv&gFQ4GTx#5jK9X_y!fwXtyGTq?mW+bSpmKxtDCuK4G8N2eB^v+9!bgvs@hf5R8^wKm75TfPa4@MgC8TEyMH=7N^9VEm^^97svd2mCz#pMygQJ-T5RpSeM+3?zF%_FUWbfr=!=RAdk^P@K=d$&k&VLr5#gbTaR+d?3JQa5vf=&8#2wu?pEdZqSxWby-dS#x*5L4wADzkPdZS+g=kdw^AAcLL3kJdLtNxaHe4wB@G#QWD=#7u6Ry$zjYc#Ydgwtht?V_jPYKm%rVqfZZP^y8bN@aTF6fPYR@PXt*%u7F?dZccV3QY8TK_LgJ&rt+V&+v!h4#wMe8@&8zaJraMVsND$nFv%GNJvwYVQxdEZH!53W5hu93dKxUs-yCuhFw*x8sVCCq-*z$w6yRd%s#GZ2QfN=U_96PVaEn#uCRQshBS?=!c5Y&SsEbVLCKA?pkqPN7HFbM8YA+MfyX^_aDedYSZZTVfCWkNjQ_^bEwCqCSPAz$7&a989yqX9h!YuVktM+!QpuWq*B&#*yRH-aM?EJ#6?g4Y@cKvM4pv#TVNxaJG^3qZLxSmV-xB+G%#uTXc+Ld8T%#74A4q5qYxqxvTRrXk!5r^+vMV5A-5xy#4ek9pdZwv8ubthgU$JNeB&p%Qg%5AF54%93GH76jtsYb4#5eca%@MY5!qyFVexU-#W!6=DkZp5pNE$x$xs7RL*Y?4nCWe7YfFES$e8Nj%@C&!Ur-uyEDzta-DLw=#Serdv?#&Acb?G3AjjJ_KB8X^J*gPq%eLc-f7z3uWDnLWRTyJ^arj#nG*v7_nuc85h*WCY6AuT-!*6a$jWbxPSm_Y2#XtR!HpXZtG+L2xE^p#LaE?*X!=b^pHRf=zG?sgB7xX@$YfmrbP+D6Y2M5Q#tTD_WV=&M^vdMRct&py_QPeEs'
+
+END
